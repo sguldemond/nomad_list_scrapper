@@ -15,7 +15,7 @@ def get_cities():
     amount = request.get_json()['amount']
 
     cached_countries = main.get_saved_countries(req_countries)
-    print("Cached countries: " + cached_countries)
+    print("Cached countries: " + json.dumps(cached_countries))
 
     countries = []
     countries.extend(cached_countries)
